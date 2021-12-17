@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.MainActivity"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="694dp"
+            android:background="@color/bgcolor"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/item_custom_text"
+                android:layout_width="398dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/central_park"
+                android:textAlignment="center"
+                android:textColor="#050303"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.814"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="408dp"
+                android:layout_height="194dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.239"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_custom_text"
+                app:layout_constraintVertical_bias="0.045"
+                app:srcCompat="@drawable/central_park2" />
+
+            <TextView
+                android:id="@+id/descripcion2"
+                android:layout_width="409dp"
+                android:layout_height="188dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/text"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.242" />
+
+            <TextView
+                android:id="@+id/ubicacion"
+                android:layout_width="255dp"
+                android:layout_height="50dp"
+                android:background="#CFD8F8"
+                android:text="@string/list_specs"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Widget.AppCompat.ListView"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/temperatura"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.897"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion2"
+                app:layout_constraintVertical_bias="0.452" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicación:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/temperatura"
+                app:layout_constraintEnd_toStartOf="@+id/ubicacion"
+                app:layout_constraintHorizontal_bias="0.592"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion2"
+                app:layout_constraintVertical_bias="0.466" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="146dp"
+                android:layout_height="36dp"
+                android:text="Temperatura:"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/temperatura"
+                app:layout_constraintHorizontal_bias="0.479"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.508" />
+
+            <TextView
+                android:id="@+id/temperatura"
+                android:layout_width="153dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="84dp"
+                android:background="#CFD8F8"
+                android:text="@string/temperatura"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textAppearance="@style/Widget.AppCompat.ListView"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.937"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descripcion2"
+                app:layout_constraintVertical_bias="0.222" />
+
+            <Button
+                android:id="@+id/ubicacion_central"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maps del lugar"
+                app:layout_constraintBottom_toTopOf="@+id/descripcion2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.089" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            tools:text="Jose Perez" />
+
+    </LinearLayout>
+</ScrollView>
