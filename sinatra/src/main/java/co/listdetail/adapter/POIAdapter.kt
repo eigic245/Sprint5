@@ -7,19 +7,20 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import co.listdetail.model.Contact
+import co.listdetail.model.POI
 import co.listdetail.R
 import com.bumptech.glide.Glide
 import java.util.ArrayList
 
 
-class ContactsAdapter(
-    private val mContacts: ArrayList<Contact>,
+class POIAdapter(
+    private val mContacts: ArrayList<POI>,
     private val context: Context,
-    private val onClick: (Contact) -> Unit
+    private val onClick: (POI) -> Unit
 
+   // private var postList: ArrayList<POI>
 
-) : RecyclerView.Adapter<ContactsAdapter.ContactViewHolder>() {
+) : RecyclerView.Adapter<POIAdapter.ContactViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.contact_list_item, parent, false)
@@ -39,7 +40,7 @@ class ContactsAdapter(
         private var title: TextView = itemView.findViewById(R.id.textview_name)
         private var descriptionItemLabel: TextView = itemView.findViewById(R.id.textview_description)
         private var imageView: ImageView = itemView.findViewById(R.id.imageview_thumb)
-        private var currentContact: Contact? = null
+        private var currentContact: POI? = null
 
         init {
             itemView.setOnClickListener {
@@ -50,7 +51,7 @@ class ContactsAdapter(
         }
 
         /* Bind Contact name and image. */
-        fun bind(contact: Contact) {
+        fun bind(contact: POI) {
             currentContact = contact
             title.text = contact.name
             descriptionItemLabel.text = contact.description1
@@ -63,4 +64,11 @@ class ContactsAdapter(
 
         }
     }
+
+    fun updatePostList(posts: List<POI>?) {
+        this.mContacts.clear()
+        posts?.let { this.mContacts.addAll(it) }
+        notifyDataSetChanged()
+    }
+
 }

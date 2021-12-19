@@ -2,7 +2,6 @@ package co.listdetail.ui
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import co.listdetail.R
-import co.listdetail.viewmodel.ContactViewModel
+import co.listdetail.viewmodel.POIViewModel
 import com.bumptech.glide.Glide
 
 /**
@@ -22,7 +21,7 @@ import com.bumptech.glide.Glide
  */
 class DetailFragment : Fragment() {
 
-    private lateinit var model: ContactViewModel
+    private lateinit var model: POIViewModel
     private lateinit var nameView: TextView
     private lateinit var contexto: Context
 
@@ -45,7 +44,7 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         nameView = view.findViewById(R.id.name_text)
-        model = ViewModelProvider(requireActivity()).get(ContactViewModel::class.java)
+        model = ViewModelProvider(requireActivity()).get(POIViewModel::class.java)
 
         item_custom_text= view.findViewById(R.id.item_custom_text)
         descripcion2= view.findViewById(R.id.descripcion2)

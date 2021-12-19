@@ -2,7 +2,7 @@ package co.listdetail.model
 
 import co.listdetail.R
 
-data class Contact(
+data class POI(
     var id: String,
     val name: String,
     var description1: String,
