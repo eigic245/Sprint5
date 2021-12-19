@@ -65,7 +65,7 @@ class DetailFragment : Fragment() {
                 bundle = bundleOf("coordenadas" to "top_rock")
             }else if (item_custom_text.text =="Ferry State Land"){
                 bundle = bundleOf("coordenadas" to "ferry_land")
-            }else if (item_custom_text.text =="High line"){
+            }else if (item_custom_text.text =="High Line"){
                 bundle = bundleOf("coordenadas" to "high_land")
             }else if (item_custom_text.text =="Vessel"){
                 bundle = bundleOf("coordenadas" to "vessel")
